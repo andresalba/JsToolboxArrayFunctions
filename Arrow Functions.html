@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+
+</style>
+
+<body>
+  <h1>This in arrow functions</h1>
+
+  </div>
+
+  <h2>Without arrow functions</h2>
+  <p id="demo1"></p>
+
+  <h2>With arrow functions</h2>
+  <p id="demo2"></p>
+
+  <script>
+
+    //without arrow functions:
+    let person1 = {
+      firstName: "John",
+      lastName : "Doe",
+      fullName : function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    document.getElementById("demo1").innerHTML = person1.fullName();
+
+    //with arrow functions:
+    let person2 = {
+      firstName: "John",
+      lastName : "Doe",
+      fullName : () => {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    document.getElementById("demo2").innerHTML = person2.fullName();
+
+  </script>
+
+</body>
+
+</html>
